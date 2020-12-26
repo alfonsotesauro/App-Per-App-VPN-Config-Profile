@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+   <dict>
+   <key>PayloadContent</key>
+   <array>
+      <dict>
+         <key>PayloadDescription</key>
+         <string>Configures VPN app mapping settings</string>
+         <key>PayloadDisplayName</key>
+         <string>VPN (Per-App VPN TCP App Mapping)</string>
+         <key>PayloadIdentifier</key>
+         <string>com.f5.access.macos.perapp.vpn.appmapping</string>
+         <key>PayloadOrganization</key>
+         <string/>
+         <key>PayloadType</key>
+         <string>com.apple.vpn.managed.appmapping</string>
+         <key>PayloadUUID</key>
+         <string>6B015006-D559-4C5C-B197-737CF4DCFA96</string>
+         <key>PayloadVersion</key>
+         <integer>1</integer>
+         <key>AppLayerVPNMapping</key>
+         <array>
+            <dict>
+               <key>Identifier</key>
+               <string>com.google.Chrome</string>
+               <key>VPNUUID</key>
+               <string>6A015006-D559-4C5C-B197-737CF4DCFA96</string>
+               <key>SigningIdentifier</key>
+               <string>com.google.Chrome</string>
+               <key>DesignatedRequirement</key>
+               <string>(identifier "com.google.Chrome" or identifier "com.google.Chrome.beta" or identifier "com.google.Chrome.dev" or identifier "com.google.Chrome.canary") and (certificate leaf = H"85cee8254216185620ddc8851c7a9fc4dfe120ef" or certificate leaf = H"c9a99324ca3fcb23dbcc36bd5fd4f9753305130a")</string>
+            </dict>
+            <dict>
+               <key>Identifier</key>
+               <string>org.mozilla.firefox</string>
+               <key>VPNUUID</key>
+               <string>6A015006-D559-4C5C-B197-737CF4DCFA96</string>
+               <key>SigningIdentifier</key>
+               <string>org.mozilla.firefox</string>
+               <key>DesignatedRequirement</key>
+               <string>anchor apple generic and certificate leaf[field.1.2.840.113635.100.6.1.9] /* exists */ or anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "43AQ936H96"</string>
+               </dict>
+         </array>
+      </dict>
+      <dict>
+         <key>PayloadType</key>
+         <string>com.apple.vpn.managed.applayer</string>
+         <key>PayloadDescription</key>
+         <string>Configures VPN settings, including authentication.</string>
+         <key>PayloadDisplayName</key>
+         <string>VPN (Per-App VPN App Mapping)</string>
+         <key>PayloadIdentifier</key>
+         <string>com.f5.access.macos.perapp.vpn.vpn</string>
+         <key>PayloadOrganization</key>
+         <string/>
+         <key>PayloadUUID</key>
+         <string>5A015006-D559-4C5C-B197-737CF4DCFA96</string>
+         <key>PayloadVersion</key>
+         <integer>1</integer>
+         <key>Proxies</key>
+         <dict/>
+         <key>UserDefinedName</key>
+         <string>App Mapping</string>
+         <key>VPN</key>
+            <dict>
+               <key>AuthName</key>
+               <string>test</string>
+               <key>AuthPassword</key>
+               <string>test</string>
+               <key>AuthenticationMethod</key>
+               <string>Password</string>
+               <key>RemoteAddress</key>
+               <string>https://portal.example.com</string>
+               <key>OnDemandMatchAppEnabled</key>
+               <true/>
+               <key>ProviderType</key>
+               <string>packet-tunnel</string>
+               <key>ProviderBundleIdentifier</key>
+               <string>com.f5.access.macos.PacketTunnel</string>
+            </dict>
+         <key>VPNSubType</key>
+         <string>com.f5.access.macos</string>
+         <key>VPNType</key>
+         <string>VPN</string>
+         <key>VendorConfig</key>
+         <dict/>
+         <key>VPNUUID</key>
+         <string>6A015006-D559-4C5C-B197-737CF4DCFA96</string>
+      </dict>
+    </array>
+    <key>PayloadDescription</key>
+    <string>PerApp VPN Payload TCP Test</string>
+    <key>PayloadDisplayName</key>
+    <string>MDM - Per-App VPN TCP</string>
+    <key>PayloadIdentifier</key>
+    <string>com.f5.access.macos.perapp.vpn</string>
+    <key>PayloadOrganization</key>
+    <string/>
+    <key>PayloadRemovalDisallowed</key>
+    <false/>
+    <key>PayloadType</key>
+    <string>Configuration</string>
+    <key>PayloadUUID</key>
+    <string>06A850CC-BC81-43FB-AA16-42BE472D2421</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+   </dict>
+</plist>
